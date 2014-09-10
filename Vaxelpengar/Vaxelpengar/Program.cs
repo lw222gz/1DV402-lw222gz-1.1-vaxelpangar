@@ -113,20 +113,41 @@ namespace Vaxelpengar
             Console.ResetColor();
             Console.WriteLine();
             Console.WriteLine();
+            if (tillbaka / 500 > 0)
+            {
+                Console.WriteLine("500 lappar       : {0}st", (int)tillbaka / 500);
+                tillbaka %= 500;
+            }
+            if (tillbaka / 100 > 0)
+            {
+                Console.WriteLine("100 lappar       : {0}st", (int)tillbaka / 100);
+                tillbaka %= 100;
+            }
+            if (tillbaka / 50 > 0)
+            {
+                Console.WriteLine("50 lappar        : {0}st", (int)tillbaka / 50);
+                tillbaka %= 50;
+            }
+            if (tillbaka / 20 > 0)
+            {
+                Console.WriteLine("20 lappar        : {0}st", (int)tillbaka / 20);
+                tillbaka %= 20;
+            }
+            if (tillbaka / 10 > 0)
+            {
+                Console.WriteLine("10 kroner        : {0}st", (int)tillbaka / 10);
+                tillbaka %= 10;
+            }
+            if (tillbaka / 5 > 0)
+            {
+                Console.WriteLine("5 kroner         : {0}st", (int)tillbaka / 5);
+                tillbaka %= 5;
+            }
+            if (tillbaka / 1 > 0)
+            {
+                Console.WriteLine("1 kroner         : {0}st", (int)tillbaka / 1);
+            }
+            }
 
-            Console.WriteLine("500 lappar       : {0}st", (int)tillbaka / 500);
-            tillbaka %= 500;
-            Console.WriteLine("100 lappar       : {0}st", (int)tillbaka / 100);
-            tillbaka %= 100;
-            Console.WriteLine("50 lappar        : {0}st", (int)tillbaka / 50);
-            tillbaka %= 50;
-            Console.WriteLine("20 lappar        : {0}st", (int)tillbaka / 20);
-            tillbaka %= 20;
-            Console.WriteLine("10 kroner        : {0}st", (int)tillbaka / 10);
-            tillbaka %= 10;
-            Console.WriteLine("5 kroner         : {0}st", (int)tillbaka / 5);
-            tillbaka %= 5;
-            Console.WriteLine("1 kroner         : {0}st", (int)tillbaka / 1);   
-        }
     }
 }
